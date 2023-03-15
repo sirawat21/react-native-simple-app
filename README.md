@@ -1,9 +1,16 @@
 # Praticing React Native project
 This project had been created for praticing using React Native to create simple app by core component.
 #### Commands
+Installing Tailwind Native
+For the configuration [Link](https://www.nativewind.dev/quick-starts/react-native-cli)
+```
+npm install nativewind
+npm install -D tailwindcss
+npx tailwindcss init
+```
+Creat and Start project
 ```
 npx create-expo-app <PROJECT>
-
 npx expo start
 ```
 ### References
