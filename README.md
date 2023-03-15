@@ -1,4 +1,6 @@
-Commands:
+# Praticing React Native project
+This project had been created for praticing using React Native to create simple app by core component.
+#### Commands
 ```
 npx create-expo-app <PROJECT>
 
