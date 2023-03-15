@@ -9,3 +9,4 @@ npx expo start
 ### References
 - React Native [sorce](https://reactnative.dev/docs)
 - Native Wind [sorce](https://www.nativewind.dev)
+- Expo [sorce](https://docs.expo.dev)
