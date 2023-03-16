@@ -7,6 +7,14 @@ For the configuration [Link](https://www.nativewind.dev/quick-starts/react-nativ
 npm install nativewind
 npm install -D tailwindcss
 npx tailwindcss init
+````
+Example content configuration of `tailwind.config.js
+```
+  content: [
+    "./App.{js,jsx,ts,tsx}",
+    "./screens/**/*.{js,jsx,ts,tsx}",
+    "./components/**/*.{js,jsx,ts,tsx}"
+  ],
 ```
 Creat and Start project
 ```

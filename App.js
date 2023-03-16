@@ -1,29 +1,18 @@
-import { useState } from "react";
-import { StatusBar } from "expo-status-bar";
+import { styled } from "nativewind";
+import { withExpoSnack } from 'nativewind';
 import { StyleSheet, Text, View, Button, Alert, TextInput } from "react-native";
 
-export default function App() {
-  const [message, setMessage] = useState();
+const StyledView = styled(View, 'flex-1 items-center justify-center bg-red');
+const StyledText = styled(Text, 'font-bold text-red-500');
+
+function App() {
   return (
-    <View style={styles.container}>
-      <Text>{ message || 'Have no incomming message yet.'}</Text>
-      <TextInput 
-        onChangeText={ (Text) => setMessage(Text) }
-        placeholder="Message something here."/>
-      <Button 
-      title="Learn More" 
-      onPress={() => Alert.alert('Clicked !!')}
-      color="#841584"/>
-      <StatusBar style="auto"/>
-    </View>
+    <StyledView>
+      <StyledText>
+        Have no incomming message yet.
+      </StyledText>
+    </StyledView>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-});
+export default withExpoSnack(App);
