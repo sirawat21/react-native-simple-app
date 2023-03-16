@@ -1,16 +1,21 @@
-import { styled } from "nativewind";
-import { withExpoSnack } from 'nativewind';
-import { StyleSheet, Text, View, Button, Alert, TextInput } from "react-native";
+import { View } from "react-native";
+import { withExpoSnack, styled } from 'nativewind';
+import { MyButton, MyText } from "./components";
 
-const StyledView = styled(View, 'flex-1 items-center justify-center bg-red');
-const StyledText = styled(Text, 'font-bold text-red-500');
+// Creating styled components
+const StyledView = styled(View);
 
-function App() {
+// Event handlering functions
+const firstButtonOnPress = () => alert('It has clicked.');
+
+const App = () => {
   return (
-    <StyledView>
-      <StyledText>
-        Have no incomming message yet.
-      </StyledText>
+    <StyledView className="flex-1 items-center justify-center bg-slate-400">
+      <MyText className="font-bold text-green-500">TailwindCSS applied style.</MyText>
+      <MyButton 
+        className="rounded-md bg-indigo-600 py-1.5 px-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+        onPress={firstButtonOnPress}
+        title="Learn More"/>
     </StyledView>
   );
 }
