@@ -16,6 +16,13 @@ Example content configuration of `tailwind.config.js
     "./components/**/*.{js,jsx,ts,tsx}"
   ],
 ```
+Example configuration of `babel.config.js
+```
+  return {
+    presets: ['babel-preset-expo'],
+    plugins: ["nativewind/babel"],
+  };
+```
 Creat and Start project
 ```
 npx create-expo-app <PROJECT>
