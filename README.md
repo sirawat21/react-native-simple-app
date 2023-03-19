@@ -1,5 +1,7 @@
-# Praticing React Native project
-This project had been created for praticing using React Native to create simple app by core component.
+# Simple App React Native project
+This project had been created for praticing using React Native to create simple app by using core component and necessary. dependencies.
+#### Demo of UI
+![](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNzk0ZDI1NWJhMDk0NjVjNWE5ZDMzMmM5OTRiYTE2ZDc4YzVlMzVjOCZjdD1n/h66rAWYNVWkyufF1Zl/giphy.gif)
 ![img|200x400](readme-assets/cover-image-readme.png)
 #### Commands
 Installing Tailwind Native
