@@ -1,4 +1,4 @@
-import { useLayoutEffect, useState } from "react";
+import { useLayoutEffect, useState, useEffect } from "react";
 import { useNavigation } from "@react-navigation/native";
 // import * as Animatable from "react-native-animatable";
 import { FontAwesome } from "@expo/vector-icons";
@@ -21,6 +21,7 @@ import {
   TouchableOpacity,
   ActivityIndicator,
 } from "react-native";
+import { getPlacesData } from "../../helpers";
 
 const DiscoverScreen = () => {
   // Adjusting navigation when layout was loaded; remove nav header
@@ -31,13 +32,21 @@ const DiscoverScreen = () => {
     });
   }, []);
 
-  /* State */
   // Menu lists
   const [type, setType] = useState("restaurants"); // menu selecte state
   // Loading
   const [isLoading, setIsLoading] = useState(false);
   // Data
   const [mainData, setMainData] = useState([]);
+
+  // When component didmount load data
+  useEffect(() => {
+    setIsLoading(true);
+    getPlacesData().then((data) => {
+      setMainData(data);
+      setInterval(setIsLoading(false), 2000);
+    });
+  }, []);
 
   return (
     <SafeAreaView className="bg-white flex-1 relative mt-12">
@@ -113,12 +122,16 @@ const DiscoverScreen = () => {
             {/* Discovery Lists */}
             <View className="px-4 mt-8 flex-row items-center justify-evenly flex-wrap">
               {mainData?.length > 0 ? (
-                <ItemCard
-                  key={101}
-                  image={UnImage}
-                  title={"Something1Something1Something1"}
-                  location={"Sydney"}
-                />
+                <>
+                  {mainData.map((data) => (
+                    <ItemCard
+                      image={data?.photo?.images?.medium?.url}
+                      title={data?.name}
+                      location={data?.location_string}
+                      data={data}
+                    />
+                  ))}
+                </>
               ) : (
                 <View className="w-full h-[400px] items-center space-x-8 justify-center">
                   <Image className="w-32 h-32 object-cover" source={NotFound} />
