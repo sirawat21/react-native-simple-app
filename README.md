@@ -27,6 +27,11 @@ Tailwind React Native Classnames
 ```
 npm install twrnc
 ```
+Install React Native Navigation
+```
+npm install @react-navigation/native @react-navigation/native-stack
+
+```
 Creat and Start project
 ```
 npx create-expo-app <PROJECT>
@@ -44,6 +49,7 @@ softwareupdate --install-rosetta
 ### References
 - React Native [sorce](https://reactnative.dev/docs/getting-started)
 - React Native Core Components [sorce](https://reactnative.dev/docs/components-and-apis)
+- React Native Navigation [sorce](https://reactnative.dev/docs/navigation)
 - Native Wind [sorce](https://www.nativewind.dev)
 - Native Wind Installation [sorce](https://www.npmjs.com/package/nativewind)
 - Expo [sorce](https://docs.expo.dev)
