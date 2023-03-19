@@ -2,6 +2,7 @@ import { useLayoutEffect } from "react";
 import { useNavigation } from "@react-navigation/native";
 import * as Animatable from "react-native-animatable";
 import { Avatar } from "../../assets";
+import { GooglePlacesInput } from "../../components";
 import {
   SafeAreaView,
   Text,
@@ -37,8 +38,8 @@ const DiscoverScreen = () => {
       </View>
       {/* Second Section */}
       {/* Search box */}
-      <View>
-        
+      <View className="flex-row items-center bg-white mx-4 rounded-xl py-1 px-4 shadow-lg mt-4">
+        <GooglePlacesInput apiKey={process.env.REACT_APP_GOOGLE_PLACE_API_KEY}/>
       </View>
       {/* Third Section */}
     </SafeAreaView>
