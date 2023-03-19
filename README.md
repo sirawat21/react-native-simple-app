@@ -7,7 +7,11 @@ For the configuration [Link](https://www.nativewind.dev/quick-starts/react-nativ
 npm install nativewind
 npm install -D tailwindcss
 npx tailwindcss init
-````
+```
+Fixed ARM chip for Mac when run ExpoGo on simulator
+```
+softwareupdate --install-rosetta
+```
 Example content configuration of `tailwind.config.js
 ```
   content: [
