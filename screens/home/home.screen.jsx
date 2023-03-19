@@ -1,7 +1,7 @@
 import { useLayoutEffect } from "react";
-import { SafeAreaView, Text, View, Image } from "react-native";
+import { SafeAreaView, Text, View, Image, TouchableOpacity } from "react-native";
 import { useNavigation } from "@react-navigation/native";
-import { HeroImage } from "../../assets"
+import { HeroImage } from "../../assets";
 
 const HomeScreen = () => {
   // Adjusting navigation when layout was loaded; remove nav header
@@ -28,7 +28,8 @@ const HomeScreen = () => {
           Good Moments
         </Text>
         <Text className="text-[#3C6072] text-base">
-          Make the most of your trip and create some wonderful memories that you'll remember for a lifetime.
+          Make the most of your trip and create some wonderful memories that
+          you'll remember for a lifetime.
         </Text>
       </View>
       {/* Third Section */}
@@ -37,7 +38,19 @@ const HomeScreen = () => {
       <View className="w-[400px] h-[400px] bg-[#E99265] rounded-full absolute ios:-bottom-28 android:-bottom-32 -left-36"></View>
       {/* Image */}
       <View className="flex-1 relative items-center justify-center">
-        <Image source={HeroImage} className="w-full h-full object-cover mt-20"/>
+        <Image
+          source={HeroImage}
+          className="w-full h-full object-cover mt-20"
+        />
+        {/* Middle Button */}
+        <View className="absolute bottom-20 w-24 h-24 border-l-2 border-t-4 border-[#00BCC9] rounded-full items-center justify-center">
+        {/* TouchableOpacity willl make it blink when it clicked */}
+          <TouchableOpacity>
+            <View className="w-20 h-20 rounded-full items-center justify-center bg-[#00BCC9]">
+              <Text className="text-gray-50 text-[35px] font-semibold">Go</Text>
+            </View>
+          </TouchableOpacity>
+        </View>
       </View>
     </SafeAreaView>
   );
