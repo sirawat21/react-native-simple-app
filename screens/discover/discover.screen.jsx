@@ -1,6 +1,7 @@
 import { useLayoutEffect, useState } from "react";
 import { useNavigation } from "@react-navigation/native";
 import * as Animatable from "react-native-animatable";
+import { FontAwesome } from "@expo/vector-icons";
 import { Avatar, Hotels, Attractions, Restaurants } from "../../assets";
 import { API_GOOGLE_PLACE } from "@env";
 import { GooglePlacesInput, Menu } from "../../components";
@@ -47,8 +48,8 @@ const DiscoverScreen = () => {
         <GooglePlacesInput apiKey={API_GOOGLE_PLACE} />
       </View>
       {/* Third Section */}
-      {/* Menu Container */}
       <ScrollView>
+      {/* Menu Container */}
         <View className="flex-row items-center justify-between px-8 mt-8">
           <Menu
             key="hotels"
@@ -72,17 +73,19 @@ const DiscoverScreen = () => {
             setType={setType}
           />
         </View>
-      </ScrollView>
-      {/* Four Section */}
       {/* Discovery Lists */}
       <View>
-        <View>
-          <Text>Top Tips</Text>
-          <TouchableOpacity>
-            <Text>Explore</Text>
+        <View className="flex-row items-center justify-between px-4 mt-8">
+          <Text className="text-[#2C7379] text-[28px] font-bold">Top Tips</Text>
+          <TouchableOpacity className="flex-row items-center justify-center space-x-2 ">
+            <Text className="text-[#A0C4C7] text-[20px] font-bold">
+              Explore
+            </Text>
+            <FontAwesome name="long-arrow-right" size={24} color="#A0C4C7" />
           </TouchableOpacity>
         </View>
       </View>
+      </ScrollView>
     </SafeAreaView>
   );
 };
