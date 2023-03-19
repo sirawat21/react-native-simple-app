@@ -27,7 +27,13 @@ Tailwind React Native Classnames
 ```
 npm install twrnc
 ```
-Install React Native Navigation
+Install React Native Navigation [Link](https://reactnavigation.org/docs/getting-started)
+```
+npm install @react-navigation/native
+npm install react-native-screens react-native-safe-area-context
+
+```
+[Optional] Install React Native Navigation (From the official site)
 ```
 npm install @react-navigation/native @react-navigation/native-stack
 
@@ -49,7 +55,8 @@ softwareupdate --install-rosetta
 ### References
 - React Native [sorce](https://reactnative.dev/docs/getting-started)
 - React Native Core Components [sorce](https://reactnative.dev/docs/components-and-apis)
-- React Native Navigation [sorce](https://reactnative.dev/docs/navigation)
+- React Native Navigation org [sorce](https://reactnavigation.org/)
+- React Native Navigation official [sorce](https://reactnative.dev/docs/navigation)
 - Native Wind [sorce](https://www.nativewind.dev)
 - Native Wind Installation [sorce](https://www.npmjs.com/package/nativewind)
 - Expo [sorce](https://docs.expo.dev)
