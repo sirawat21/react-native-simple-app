@@ -1,8 +1,14 @@
 import { useLayoutEffect, useState } from "react";
 import { useNavigation } from "@react-navigation/native";
-import * as Animatable from "react-native-animatable";
+// import * as Animatable from "react-native-animatable";
 import { FontAwesome } from "@expo/vector-icons";
-import { Avatar, Hotels, Attractions, Restaurants, UnImage } from "../../assets";
+import {
+  Avatar,
+  Hotels,
+  Attractions,
+  Restaurants,
+  UnImage,
+} from "../../assets";
 import { API_GOOGLE_PLACE } from "@env";
 import { GooglePlacesInput, Menu, ItemCard } from "../../components";
 import {
@@ -12,6 +18,7 @@ import {
   ScrollView,
   Image,
   TouchableOpacity,
+  ActivityIndicator
 } from "react-native";
 
 const DiscoverScreen = () => {
@@ -25,6 +32,8 @@ const DiscoverScreen = () => {
 
   // Menu lists handler
   const [type, setType] = useState("restaurants"); // menu selecte state
+  // Loading handler
+  const [isLoading, setIsLoading] = useState(false);
 
   return (
     <SafeAreaView className="bg-white flex-1 relative mt-12">
@@ -48,49 +57,74 @@ const DiscoverScreen = () => {
         <GooglePlacesInput apiKey={API_GOOGLE_PLACE} />
       </View>
       {/* Third Section */}
-      <ScrollView>
-      {/* Menu Container */}
-        <View className="flex-row items-center justify-between px-8 mt-8">
-          <Menu
-            key="hotels"
-            title="Hotels"
-            image={Hotels}
-            type={type}
-            setType={setType}
-          />
-          <Menu
-            key="attractions"
-            title="Attractions"
-            image={Attractions}
-            type={type}
-            setType={setType}
-          />
-          <Menu
-            key="restaurants"
-            title="Restaurants"
-            image={Restaurants}
-            type={type}
-            setType={setType}
-          />
+
+      {/* Start Loding Handler */}
+      {isLoading ? (
+        <View className="flex-1 items-center justify-center">
+          <ActivityIndicator size="large" color="#0B646B" />
         </View>
-      {/* Devided section */}
-      <View>
-        <View className="flex-row items-center justify-between px-4 mt-8">
-          <Text className="text-[#2C7379] text-[28px] font-bold">Top Tips</Text>
-          <TouchableOpacity className="flex-row items-center justify-center space-x-2 ">
-            <Text className="text-[#A0C4C7] text-[20px] font-bold">
-              Explore
-            </Text>
-            <FontAwesome name="long-arrow-right" size={24} color="#A0C4C7" />
-          </TouchableOpacity>
-        </View>
-        {/* Discovery Lists */}
-        <View className="px-4 mt-8 flex-row items-center justify-evenly flex-wrap">
-            <ItemCard key={101} image={UnImage} title={"Something1Something1Something1"} location={"Sydney"}/>
-            <ItemCard key={102} image={UnImage} title={"Something2"} location={"Sydney"}/>
-        </View>
-      </View>
-      </ScrollView>
+      ) : (
+        <ScrollView>
+          {/* Menu Container */}
+          <View className="flex-row items-center justify-between px-8 mt-8">
+            <Menu
+              key="hotels"
+              title="Hotels"
+              image={Hotels}
+              type={type}
+              setType={setType}
+            />
+            <Menu
+              key="attractions"
+              title="Attractions"
+              image={Attractions}
+              type={type}
+              setType={setType}
+            />
+            <Menu
+              key="restaurants"
+              title="Restaurants"
+              image={Restaurants}
+              type={type}
+              setType={setType}
+            />
+          </View>
+          {/* Devided section */}
+          <View>
+            <View className="flex-row items-center justify-between px-4 mt-8">
+              <Text className="text-[#2C7379] text-[28px] font-bold">
+                Top Tips
+              </Text>
+              <TouchableOpacity className="flex-row items-center justify-center space-x-2 ">
+                <Text className="text-[#A0C4C7] text-[20px] font-bold">
+                  Explore
+                </Text>
+                <FontAwesome
+                  name="long-arrow-right"
+                  size={24}
+                  color="#A0C4C7"
+                />
+              </TouchableOpacity>
+            </View>
+            {/* Discovery Lists */}
+            <View className="px-4 mt-8 flex-row items-center justify-evenly flex-wrap">
+              <ItemCard
+                key={101}
+                image={UnImage}
+                title={"Something1Something1Something1"}
+                location={"Sydney"}
+              />
+              <ItemCard
+                key={102}
+                image={UnImage}
+                title={"Something2"}
+                location={"Sydney"}
+              />
+            </View>
+          </View>
+        </ScrollView>
+      )}
+      {/* End Loading Handler */}
     </SafeAreaView>
   );
 };
