@@ -8,10 +8,6 @@ npm install nativewind
 npm install -D tailwindcss
 npx tailwindcss init
 ```
-Fixed ARM chip for Mac when run ExpoGo on simulator
-```
-softwareupdate --install-rosetta
-```
 Example content configuration of `tailwind.config.js
 ```
   content: [
@@ -27,6 +23,10 @@ Example configuration of `babel.config.js
     plugins: ["nativewind/babel"],
   };
 ```
+Tailwind React Native Classnames
+```
+npm install twrnc
+```
 Creat and Start project
 ```
 npx create-expo-app <PROJECT>
@@ -37,9 +37,14 @@ Build
 npx expo run:ios
 npx expo run:android
 ```
+Fixed ARM chip for Mac when run ExpoGo on simulator
+```
+softwareupdate --install-rosetta
+```
 ### References
 - React Native [sorce](https://reactnative.dev/docs/getting-started)
 - React Native Core Components [sorce](https://reactnative.dev/docs/components-and-apis)
 - Native Wind [sorce](https://www.nativewind.dev)
 - Native Wind Installation [sorce](https://www.npmjs.com/package/nativewind)
 - Expo [sorce](https://docs.expo.dev)
+- Tailwind React Native Classnames [sorce](https://www.npmjs.com/package/twrnc)
