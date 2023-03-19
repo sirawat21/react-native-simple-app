@@ -48,6 +48,10 @@ Build
 npx expo run:ios
 npx expo run:android
 ```
+Install Expo status bar [Link](https://docs.expo.dev/versions/latest/sdk/status-bar/)
+```
+npx expo install expo-status-bar
+```
 Fixed ARM chip for Mac when run ExpoGo on simulator
 ```
 softwareupdate --install-rosetta
