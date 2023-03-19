@@ -72,6 +72,7 @@ softwareupdate --install-rosetta
 - React Native Navigation official [sorce](https://reactnative.dev/docs/navigation)
 - React Native Animatable [sorce](https://www.npmjs.com/package/react-native-animatable/v/1.3.3)
 - React Native Google Places Autocomplete [sorce](https://www.npmjs.com/package/react-native-google-places-autocomplete)
+- Google Place API [sorce](https://developers.google.com/maps/documentation/places/web-service/overview)
 - Native Wind [sorce](https://www.nativewind.dev)
 - Native Wind Installation [sorce](https://www.npmjs.com/package/nativewind)
 - Expo [sorce](https://docs.expo.dev)
