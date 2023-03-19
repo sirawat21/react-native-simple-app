@@ -118,6 +118,11 @@ const ItemScreen = ({ route }) => {
           )}
         </View>
         {/* Description */}
+        {data?.description && (
+          <Text className="mt-4 tracking-wide text-[16px] font-semibold text-[#97A6AF]">
+            {data?.description}
+          </Text>
+        )}
       </ScrollView>
     </SafeAreaView>
   );
