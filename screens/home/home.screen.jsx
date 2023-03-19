@@ -53,20 +53,18 @@ const HomeScreen = () => {
           className="w-full h-full object-cover mt-20"
         />
         {/* Middle Button */}
-        <View className="absolute bottom-20 w-24 h-24 border-l-2 border-t-4 border-[#00BCC9] rounded-full items-center justify-center">
-          {/* TouchableOpacity willl make it blink when it clicked */}
-          <TouchableOpacity>
-            {/* Applied animation for a custom view(middle button) */}
-            <Animatable.View
-              animation="pulse"
-              easing="ease-in-out"
-              interationCount={"infinite"}
-              className="w-20 h-20 rounded-full items-center justify-center bg-[#00BCC9]"
-            >
-              <Text className="text-gray-50 text-[35px] font-semibold">Go</Text>
-            </Animatable.View>
-          </TouchableOpacity>
-        </View>
+        {/* TouchableOpacity willl make it blink when it clicked */}
+        <TouchableOpacity className="absolute bottom-20 w-24 h-24 border-l-2 border-t-4 border-[#00BCC9] rounded-full items-center justify-center">
+          {/* Applied animation for a custom view(middle button) */}
+          <Animatable.View
+            animation="pulse"
+            easing="ease-in-out"
+            interationCount={"infinite"}
+            className="w-20 h-20 rounded-full items-center justify-center bg-[#00BCC9]"
+          >
+            <Text className="text-gray-50 text-[35px] font-semibold">Go</Text>
+          </Animatable.View>
+        </TouchableOpacity>
       </View>
     </SafeAreaView>
   );
