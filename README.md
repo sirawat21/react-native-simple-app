@@ -1,6 +1,6 @@
 # Praticing React Native project
 This project had been created for praticing using React Native to create simple app by core component.
-![CoverImage](readme-assets/cover-image-readme.png)
+![CoverImage](readme-assets/cover-image-readme.png =200x400)
 #### Commands
 Installing Tailwind Native
 For the configuration [Link](https://www.nativewind.dev/quick-starts/react-native-cli)
