@@ -28,6 +28,11 @@ Creat and Start project
 npx create-expo-app <PROJECT>
 npx expo start
 ```
+Build
+```
+npx expo run:ios
+npx expo run:android
+```
 ### References
 - React Native [sorce](https://reactnative.dev/docs/getting-started)
 - React Native Core Components [sorce](https://reactnative.dev/docs/components-and-apis)
