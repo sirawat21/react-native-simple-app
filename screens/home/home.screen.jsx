@@ -1,6 +1,7 @@
 import { useLayoutEffect } from "react";
-import { SafeAreaView, Text, View } from "react-native";
+import { SafeAreaView, Text, View, Image } from "react-native";
 import { useNavigation } from "@react-navigation/native";
+import { HeroImage } from "../../assets"
 
 const HomeScreen = () => {
   // Adjusting navigation when layout was loaded; remove nav header
@@ -31,8 +32,13 @@ const HomeScreen = () => {
         </Text>
       </View>
       {/* Third Section */}
+      {/* Curcle */}
       <View className="w-[400px] h-[400px] bg-[#00BCC9] rounded-full absolute bottom-36 -right-36"></View>
       <View className="w-[400px] h-[400px] bg-[#E99265] rounded-full absolute ios:-bottom-28 android:-bottom-32 -left-36"></View>
+      {/* Image */}
+      <View className="flex-1 relative items-center justify-center">
+        <Image source={HeroImage} className="w-full h-full object-cover mt-20"/>
+      </View>
     </SafeAreaView>
   );
 };
