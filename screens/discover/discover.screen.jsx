@@ -22,8 +22,8 @@ const DiscoverScreen = () => {
     });
   }, []);
 
-  // State
-  const [type, setType] = useState("restaurants");
+  // Menu lists handler
+  const [type, setType] = useState("restaurants"); // menu selecte state
 
   return (
     <SafeAreaView className="bg-white flex-1 relative mt-12">
@@ -44,19 +44,33 @@ const DiscoverScreen = () => {
       {/* Second Section */}
       {/* Search box */}
       <View className="flex-row items-center bg-white mx-4 rounded-xl py-1 px-4 shadow-lg mt-4">
-        <GooglePlacesInput apiKey={API_GOOGLE_PLACE}/>
+        <GooglePlacesInput apiKey={API_GOOGLE_PLACE} />
       </View>
       {/* Third Section */}
       {/* Menu Container */}
       <ScrollView>
-        <View className="flex-row items-center justify-center px-8 mt-8">
-        <Menu
-            key={"hotel"}
+        <View className="flex-row items-center justify-between px-8 mt-8">
+          <Menu
+            key="hotels"
             title="Hotels"
             image={Hotels}
             type={type}
             setType={setType}
-        />
+          />
+          <Menu
+            key="attractions"
+            title="Attractions"
+            image={Attractions}
+            type={type}
+            setType={setType}
+          />
+          <Menu
+            key="restaurants"
+            title="Restaurants"
+            image={Restaurants}
+            type={type}
+            setType={setType}
+          />
         </View>
       </ScrollView>
     </SafeAreaView>
