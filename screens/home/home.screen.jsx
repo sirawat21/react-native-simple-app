@@ -1,7 +1,14 @@
 import { useLayoutEffect } from "react";
-import { SafeAreaView, Text, View, Image, TouchableOpacity } from "react-native";
 import { useNavigation } from "@react-navigation/native";
+import * as Animatable from "react-native-animatable";
 import { HeroImage } from "../../assets";
+import {
+  SafeAreaView,
+  Text,
+  View,
+  Image,
+  TouchableOpacity,
+} from "react-native";
 
 const HomeScreen = () => {
   // Adjusting navigation when layout was loaded; remove nav header
@@ -44,7 +51,7 @@ const HomeScreen = () => {
         />
         {/* Middle Button */}
         <View className="absolute bottom-20 w-24 h-24 border-l-2 border-t-4 border-[#00BCC9] rounded-full items-center justify-center">
-        {/* TouchableOpacity willl make it blink when it clicked */}
+          {/* TouchableOpacity willl make it blink when it clicked */}
           <TouchableOpacity>
             <View className="w-20 h-20 rounded-full items-center justify-center bg-[#00BCC9]">
               <Text className="text-gray-50 text-[35px] font-semibold">Go</Text>
