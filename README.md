@@ -57,7 +57,7 @@ Install React Native Animation [Link](https://www.npmjs.com/package/react-native
 ```
 npm install react-native-animatable
 ```
-Install React Native Expo Icon
+Install React Native Expo Icon [Usage link](https://icons.expo.fyi/)
 ```
 npm install @expo/vector-icons
 ```
