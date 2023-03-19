@@ -1,7 +1,7 @@
 import { useLayoutEffect } from "react";
 import { useNavigation } from "@react-navigation/native";
 import * as Animatable from "react-native-animatable";
-import { HeroImage } from "../../assets";
+import { Avatar } from "../../assets";
 import {
   SafeAreaView,
   Text,
@@ -20,8 +20,21 @@ const DiscoverScreen = () => {
   }, []);
 
   return (
-    <SafeAreaView className="bg-white flex-1 relative">
+    <SafeAreaView className="bg-white flex-1 relative mt-12">
       {/* First Section */}
+      {/* Title & Avatar */}
+      <View className="flex-row items-center justify-between px-8">
+        <View>
+          <Text className="text-[40px] text-[#0B646B] font-bold">Discover</Text>
+          <Text className="text-[#527283] text-[36px]">the beauty today</Text>
+        </View>
+        <View className="w-12 h-12 bg-gray-400 rounded-md items-center justify-center shadow-lg">
+          <Image
+            className="w-full h-full object-cover rounded-md"
+            source={Avatar}
+          />
+        </View>
+      </View>
       {/* Second Section */}
       {/* Third Section */}
     </SafeAreaView>
