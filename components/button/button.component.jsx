@@ -1,11 +1,7 @@
 import { Button } from "react-native";
-import { styled } from 'nativewind';
+import tw from 'twrnc';
 
-// Styled Button
-const StyledButton = styled(Button);
-
-const MyButton = (props) => {
-    return(<StyledButton {...props} />);
+const ButtonComponent = ({styled, title, onPress}) => {
+    return(<Button style={tw.style(styled)} title={title} onPress={onPress} />);
 };
-
-export default MyButton;
+export default ButtonComponent;

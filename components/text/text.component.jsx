@@ -1,11 +1,8 @@
 import { Text } from "react-native";
-import { styled } from "nativewind";
+import tw from 'twrnc';
 
-// Styled Text component
-const StyledText = styled(Text);
-
-const MyText = ({childe, props}) => {
-    return(<StyledText {...props}>{ childe }</StyledText>);
+const TextComponent = ({styled, children}) => {
+    return(<Text style={tw.style(styled)}>{ children }</Text>);
 };
 
-export default MyText;
+export default TextComponent;

@@ -1,2 +1,2 @@
-export { default as MyButton } from "./button/button.component";
-export { default as MyText } from "./text/text.component";
+export { default as ButtonComponent } from "./button/button.component";
+export { default as TextComponent } from "./text/text.component";
