@@ -120,8 +120,11 @@ const DiscoverScreen = () => {
                   location={"Sydney"}
                 />
               ) : (
-                <View className="w-full h-[600px] items-center space-x-8 justify-center">
-                    <Image className="w-32 h-32 object-cover" source={NotFound}/>
+                <View className="w-full h-[400px] items-center space-x-8 justify-center">
+                  <Image className="w-32 h-32 object-cover" source={NotFound} />
+                  <Text className="text-2xl text-[#428288] font-semibold">
+                    Opps... No Data Not Found
+                  </Text>
                 </View>
               )}
             </View>
