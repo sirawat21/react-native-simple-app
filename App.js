@@ -1,17 +1,19 @@
 import { StatusBar } from "expo-status-bar";
-import { SafeAreaView, Text, View } from "react-native";
-import tw from "twrnc";
-import { NavigationContainer } from '@react-navigation/native';
+import { NavigationContainer } from "@react-navigation/native";
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 // import { MyButton, MyText } from "./components";
+import { HomeScreen } from "./screens";
+
+const Stack = createNativeStackNavigator();
 
 const App = () => {
   return (
-    <SafeAreaView style={tw`flex-1 items-center justify-center`}>
-      <Text style={tw`text-md text-red-600`}>
-        App Homepage
-      </Text>
-    </SafeAreaView>
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name="Home" component={HomeScreen}/>
+      </Stack.Navigator>
+    </NavigationContainer>
   );
-}
+};
 
 export default App;
