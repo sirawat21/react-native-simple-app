@@ -72,6 +72,7 @@ npm install react-native-dotenv
 }
 ```
 Rapid API Travel Advisor [Link](https://rapidapi.com/apidojo/api/travel-advisor)
+
 Fixed ARM chip for Mac when run ExpoGo on simulator
 ```
 softwareupdate --install-rosetta
