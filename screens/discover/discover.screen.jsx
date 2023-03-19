@@ -8,6 +8,7 @@ import {
   Attractions,
   Restaurants,
   UnImage,
+  NotFound,
 } from "../../assets";
 import { API_GOOGLE_PLACE } from "@env";
 import { GooglePlacesInput, Menu, ItemCard } from "../../components";
@@ -18,7 +19,7 @@ import {
   ScrollView,
   Image,
   TouchableOpacity,
-  ActivityIndicator
+  ActivityIndicator,
 } from "react-native";
 
 const DiscoverScreen = () => {
@@ -30,10 +31,13 @@ const DiscoverScreen = () => {
     });
   }, []);
 
-  // Menu lists handler
+  /* State */
+  // Menu lists
   const [type, setType] = useState("restaurants"); // menu selecte state
-  // Loading handler
+  // Loading
   const [isLoading, setIsLoading] = useState(false);
+  // Data
+  const [mainData, setMainData] = useState([]);
 
   return (
     <SafeAreaView className="bg-white flex-1 relative mt-12">
@@ -108,18 +112,18 @@ const DiscoverScreen = () => {
             </View>
             {/* Discovery Lists */}
             <View className="px-4 mt-8 flex-row items-center justify-evenly flex-wrap">
-              <ItemCard
-                key={101}
-                image={UnImage}
-                title={"Something1Something1Something1"}
-                location={"Sydney"}
-              />
-              <ItemCard
-                key={102}
-                image={UnImage}
-                title={"Something2"}
-                location={"Sydney"}
-              />
+              {mainData?.length > 0 ? (
+                <ItemCard
+                  key={101}
+                  image={UnImage}
+                  title={"Something1Something1Something1"}
+                  location={"Sydney"}
+                />
+              ) : (
+                <View className="w-full h-[600px] items-center space-x-8 justify-center">
+                    <Image className="w-32 h-32 object-cover" source={NotFound}/>
+                </View>
+              )}
             </View>
           </View>
         </ScrollView>
