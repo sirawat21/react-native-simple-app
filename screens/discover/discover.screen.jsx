@@ -3,11 +3,12 @@ import { useNavigation } from "@react-navigation/native";
 import * as Animatable from "react-native-animatable";
 import { Avatar } from "../../assets";
 import { API_GOOGLE_PLACE } from "@env";
-import { GooglePlacesInput } from "../../components";
+import { GooglePlacesInput, Menu } from "../../components";
 import {
   SafeAreaView,
   Text,
   View,
+  ScrollView,
   Image,
   TouchableOpacity,
 } from "react-native";
@@ -43,6 +44,12 @@ const DiscoverScreen = () => {
         <GooglePlacesInput apiKey={API_GOOGLE_PLACE}/>
       </View>
       {/* Third Section */}
+      {/* Menu Container */}
+      <ScrollView>
+        <View className="flex-row items-center justify-center px-8 mt-8">
+        <Menu/>
+        </View>
+      </ScrollView>
     </SafeAreaView>
   );
 };
