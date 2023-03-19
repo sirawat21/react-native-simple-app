@@ -57,6 +57,10 @@ Install React Native Animation [Link](https://www.npmjs.com/package/react-native
 ```
 npm install react-native-animatable
 ```
+Install React Native Expo Icon
+```
+npm install @expo/vector-icons
+```
 Install React Native Google Places Autocomplete [Link](https://www.npmjs.com/package/react-native-google-places-autocomplete)
 ```
 npm install react-native-google-places-autocomplete
