@@ -47,8 +47,8 @@ const HomeScreen = () => {
       <View className="flex-1 relative items-center justify-center">
         {/* Applied animation for image */}
         <Animatable.Image
-        animation="fadeIn"
-        easing="ease-in-out"
+          animation="fadeIn"
+          easing="ease-in-out"
           source={HeroImage}
           className="w-full h-full object-cover mt-20"
         />
@@ -56,9 +56,15 @@ const HomeScreen = () => {
         <View className="absolute bottom-20 w-24 h-24 border-l-2 border-t-4 border-[#00BCC9] rounded-full items-center justify-center">
           {/* TouchableOpacity willl make it blink when it clicked */}
           <TouchableOpacity>
-            <View className="w-20 h-20 rounded-full items-center justify-center bg-[#00BCC9]">
+            {/* Applied animation for a custom view(middle button) */}
+            <Animatable.View
+              animation="pulse"
+              easing="ease-in-out"
+              interationCount={"infinite"}
+              className="w-20 h-20 rounded-full items-center justify-center bg-[#00BCC9]"
+            >
               <Text className="text-gray-50 text-[35px] font-semibold">Go</Text>
-            </View>
+            </Animatable.View>
           </TouchableOpacity>
         </View>
       </View>
