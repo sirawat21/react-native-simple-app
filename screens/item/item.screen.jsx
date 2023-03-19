@@ -78,8 +78,9 @@ const ItemScreen = ({ route }) => {
             </Text>
           </View>
         </View>
-        {/* Rating */}
+        {/* Badget Bar */}
         <View className="mt-4 flex-row items-center justify-between">
+          {/* Rating */}
           {data?.rating && (
             <View className="flex-row items-center space-x-2">
               <View className="w-12 h-12 rounded-2xl bg-red-100 items-center justify-center shadow-md">
@@ -91,7 +92,32 @@ const ItemScreen = ({ route }) => {
               </View>
             </View>
           )}
+          {/* Price Level */}
+          {data?.price_level && (
+            <View className="flex-row items-center space-x-2">
+              <View className="w-12 h-12 rounded-2xl bg-red-100 items-center justify-center shadow-md">
+                <FontAwesome name="star" size={24} color="#D58574" />
+              </View>
+              <View>
+                <Text className="text-[#515151]">{data?.price_level}</Text>
+                <Text className="text-[#515151]">Price Level</Text>
+              </View>
+            </View>
+          )}
+          {/* Bearing */}
+          {data?.bearing && (
+            <View className="flex-row items-center space-x-2">
+              <View className="w-12 h-12 rounded-2xl bg-red-100 items-center justify-center shadow-md">
+                <FontAwesome name="star" size={24} color="#D58574" />
+              </View>
+              <View>
+                <Text className="text-[#515151]">{data?.bearing}</Text>
+                <Text className="text-[#515151]">Bearing</Text>
+              </View>
+            </View>
+          )}
         </View>
+        {/* Description */}
       </ScrollView>
     </SafeAreaView>
   );
