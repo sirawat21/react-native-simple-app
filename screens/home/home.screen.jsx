@@ -31,6 +31,8 @@ const HomeScreen = () => {
         </Text>
       </View>
       {/* Third Section */}
+      <View className="w-[400px] h-[400px] bg-[#00BCC9] rounded-full absolute bottom-36 -right-36"></View>
+      <View className="w-[400px] h-[400px] bg-[#E99265] rounded-full absolute ios:-bottom-28 android:-bottom-32 -left-36"></View>
     </SafeAreaView>
   );
 };
