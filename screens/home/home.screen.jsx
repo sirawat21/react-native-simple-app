@@ -45,7 +45,10 @@ const HomeScreen = () => {
       <View className="w-[400px] h-[400px] bg-[#E99265] rounded-full absolute ios:-bottom-28 android:-bottom-32 -left-36"></View>
       {/* Image */}
       <View className="flex-1 relative items-center justify-center">
-        <Image
+        {/* Applied animation for image */}
+        <Animatable.Image
+        animation="fadeIn"
+        easing="ease-in-out"
           source={HeroImage}
           className="w-full h-full object-cover mt-20"
         />
