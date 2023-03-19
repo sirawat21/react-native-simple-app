@@ -65,6 +65,8 @@ Install React Native Google Places Autocomplete [Link](https://www.npmjs.com/pac
 ```
 npm install react-native-google-places-autocomplete
 ```
+React Native Activity Indicator (loading handler) [Doc](https://reactnative.dev/docs/activityindicator)
+
 Install React Native .env [Link](https://www.npmjs.com/package/react-native-dotenv)
 ```
 npm install react-native-dotenv
