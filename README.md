@@ -90,4 +90,5 @@ softwareupdate --install-rosetta
 - Native Wind [sorce](https://www.nativewind.dev)
 - Native Wind Installation [sorce](https://www.npmjs.com/package/nativewind)
 - Expo [sorce](https://docs.expo.dev)
+- Expo Icon [sorce](https://docs.expo.dev/guides/icons/)
 - Tailwind React Native Classnames [sorce](https://www.npmjs.com/package/twrnc)

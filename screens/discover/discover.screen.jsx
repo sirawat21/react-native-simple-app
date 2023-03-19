@@ -73,6 +73,16 @@ const DiscoverScreen = () => {
           />
         </View>
       </ScrollView>
+      {/* Four Section */}
+      {/* Discovery Lists */}
+      <View>
+        <View>
+          <Text>Top Tips</Text>
+          <TouchableOpacity>
+            <Text>Explore</Text>
+          </TouchableOpacity>
+        </View>
+      </View>
     </SafeAreaView>
   );
 };
