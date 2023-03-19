@@ -54,7 +54,9 @@ const HomeScreen = () => {
         />
         {/* Middle Button */}
         {/* TouchableOpacity willl make it blink when it clicked */}
-        <TouchableOpacity className="absolute bottom-20 w-24 h-24 border-l-2 border-t-4 border-[#00BCC9] rounded-full items-center justify-center">
+        <TouchableOpacity 
+        onPress={() => navigation.navigate("Discover")}
+        className="absolute bottom-20 w-24 h-24 border-l-2 border-t-4 border-[#00BCC9] rounded-full items-center justify-center">
           {/* Applied animation for a custom view(middle button) */}
           <Animatable.View
             animation="pulse"
