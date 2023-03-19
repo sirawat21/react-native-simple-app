@@ -61,6 +61,17 @@ Install React Native Google Places Autocomplete [Link](https://www.npmjs.com/pac
 ```
 npm install react-native-google-places-autocomplete
 ```
+Install React Native .env [Link](https://www.npmjs.com/package/react-native-dotenv)
+```
+npm install react-native-dotenv
+// configuration of babel.config.js
+{
+  "plugins": [
+    ["module:react-native-dotenv"]
+  ]
+}
+
+```
 Fixed ARM chip for Mac when run ExpoGo on simulator
 ```
 softwareupdate --install-rosetta
@@ -72,6 +83,7 @@ softwareupdate --install-rosetta
 - React Native Navigation official [sorce](https://reactnative.dev/docs/navigation)
 - React Native Animatable [sorce](https://www.npmjs.com/package/react-native-animatable/v/1.3.3)
 - React Native Google Places Autocomplete [sorce](https://www.npmjs.com/package/react-native-google-places-autocomplete)
+- React Native Dot Env [sorce](https://www.npmjs.com/package/react-native-dotenv)
 - Google Place API [sorce](https://developers.google.com/maps/documentation/places/web-service/overview)
 - Native Wind [sorce](https://www.nativewind.dev)
 - Native Wind Installation [sorce](https://www.npmjs.com/package/nativewind)
