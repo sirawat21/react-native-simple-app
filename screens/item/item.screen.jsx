@@ -133,6 +133,33 @@ const ItemScreen = ({ route }) => {
             ))}
           </View>
         )}
+        {/* Contract */}
+        <View className="space-y-2 mt-4 bg-gray-100 rounded-2xl px-4 py-2">
+          {data?.phone && (
+            <View className="items-center flex-row space-x-6">
+              <FontAwesome name="phone" size={24} color="#428288" />
+              <Text className="text-lg">{data?.phone}</Text>
+            </View>
+          )}
+          {data?.email && (
+            <View className="items-center flex-row space-x-6">
+              <FontAwesome name="envelope" size={24} color="#428288" />
+              <Text className="text-lg">{data?.email}</Text>
+            </View>
+          )}
+          {data?.address && (
+            <View className="items-center flex-row space-x-6">
+              <FontAwesome name="map-pin" size={24} color="#428288" />
+              <Text className="text-lg">{data?.address}</Text>
+            </View>
+          )}
+          {/* Booking */}
+          <View className="mt-4 px-4 py-4 rounded-lg bg-[#06B2BE] items-center justify-center mb-12">
+            <Text className="text-3xl font-semibold uppercase tracking-wider text-gray-100">
+              Book Now
+            </Text>
+          </View>
+        </View>
       </ScrollView>
     </SafeAreaView>
   );
