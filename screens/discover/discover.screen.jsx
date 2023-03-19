@@ -36,6 +36,10 @@ const DiscoverScreen = () => {
         </View>
       </View>
       {/* Second Section */}
+      {/* Search box */}
+      <View>
+        
+      </View>
       {/* Third Section */}
     </SafeAreaView>
   );
