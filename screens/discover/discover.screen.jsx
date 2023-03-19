@@ -1,7 +1,7 @@
-import { useLayoutEffect } from "react";
+import { useLayoutEffect, useState } from "react";
 import { useNavigation } from "@react-navigation/native";
 import * as Animatable from "react-native-animatable";
-import { Avatar } from "../../assets";
+import { Avatar, Hotels, Attractions, Restaurants } from "../../assets";
 import { API_GOOGLE_PLACE } from "@env";
 import { GooglePlacesInput, Menu } from "../../components";
 import {
@@ -21,6 +21,9 @@ const DiscoverScreen = () => {
       headerShown: false,
     });
   }, []);
+
+  // State
+  const [type, setType] = useState("restaurants");
 
   return (
     <SafeAreaView className="bg-white flex-1 relative mt-12">
@@ -47,7 +50,13 @@ const DiscoverScreen = () => {
       {/* Menu Container */}
       <ScrollView>
         <View className="flex-row items-center justify-center px-8 mt-8">
-        <Menu/>
+        <Menu
+            key={"hotel"}
+            title="Hotels"
+            image={Hotels}
+            type={type}
+            setType={setType}
+        />
         </View>
       </ScrollView>
     </SafeAreaView>
