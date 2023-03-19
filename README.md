@@ -53,6 +53,11 @@ Install Expo status bar [Link](https://docs.expo.dev/versions/latest/sdk/status-
 ```
 npx expo install expo-status-bar
 ```
+React Native Animation [Link](https://www.npmjs.com/package/react-native-animatable/v/1.3.3)
+```
+npm install react-native-animatable
+```
+
 Fixed ARM chip for Mac when run ExpoGo on simulator
 ```
 softwareupdate --install-rosetta
@@ -62,6 +67,7 @@ softwareupdate --install-rosetta
 - React Native Core Components [sorce](https://reactnative.dev/docs/components-and-apis)
 - React Native Navigation org [sorce](https://reactnavigation.org/)
 - React Native Navigation official [sorce](https://reactnative.dev/docs/navigation)
+- React Native Animatable [sorce](https://www.npmjs.com/package/react-native-animatable/v/1.3.3)
 - Native Wind [sorce](https://www.nativewind.dev)
 - Native Wind Installation [sorce](https://www.npmjs.com/package/nativewind)
 - Expo [sorce](https://docs.expo.dev)
