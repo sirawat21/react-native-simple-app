@@ -41,9 +41,7 @@ const DiscoverScreen = () => {
       {/* Search box */}
       <View className="flex-row items-center bg-white mx-4 rounded-xl py-1 px-4 shadow-lg mt-4">
         <GooglePlacesInput apiKey={API_GOOGLE_PLACE}/>
-        
       </View>
-      <View><Text>1{API_GOOGLE_PLACE}</Text></View>
       {/* Third Section */}
     </SafeAreaView>
   );
