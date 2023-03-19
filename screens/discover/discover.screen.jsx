@@ -2,9 +2,9 @@ import { useLayoutEffect, useState } from "react";
 import { useNavigation } from "@react-navigation/native";
 import * as Animatable from "react-native-animatable";
 import { FontAwesome } from "@expo/vector-icons";
-import { Avatar, Hotels, Attractions, Restaurants } from "../../assets";
+import { Avatar, Hotels, Attractions, Restaurants, UnImage } from "../../assets";
 import { API_GOOGLE_PLACE } from "@env";
-import { GooglePlacesInput, Menu } from "../../components";
+import { GooglePlacesInput, Menu, ItemCard } from "../../components";
 import {
   SafeAreaView,
   Text,
@@ -73,7 +73,7 @@ const DiscoverScreen = () => {
             setType={setType}
           />
         </View>
-      {/* Discovery Lists */}
+      {/* Devided section */}
       <View>
         <View className="flex-row items-center justify-between px-4 mt-8">
           <Text className="text-[#2C7379] text-[28px] font-bold">Top Tips</Text>
@@ -83,6 +83,11 @@ const DiscoverScreen = () => {
             </Text>
             <FontAwesome name="long-arrow-right" size={24} color="#A0C4C7" />
           </TouchableOpacity>
+        </View>
+        {/* Discovery Lists */}
+        <View className="px-4 mt-8 flex-row items-center justify-evenly flex-wrap">
+            <ItemCard key={101} image={UnImage} title={"Something1Something1Something1"} location={"Sydney"}/>
+            <ItemCard key={102} image={UnImage} title={"Something2"} location={"Sydney"}/>
         </View>
       </View>
       </ScrollView>
