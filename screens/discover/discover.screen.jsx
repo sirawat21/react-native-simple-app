@@ -29,8 +29,12 @@ const DiscoverScreen = () => {
   const [bl_lng, setBl_lng] = useState(null);
   const [tr_lat, setTl_lat] = useState(null);
   const [tr_lng, setTl_lng] = useState(null); 
-  // On press handler of Google Places
+  // On press handler of Google Places for set las/long
   const onPressGooglePlacesInputHandler = (details) => {
+    setBl_lat(details?.geometry?.viewport?.southwest?.lat);
+    setBl_lng(details?.geometry?.viewport?.southwest?.lng);
+    setTl_lat(details?.geometry?.viewport?.northwest?.lat);
+    setTl_lng(details?.geometry?.viewport?.northwest?.lng);
     // console.log(details?.geometry?.viewport); // get latitude and longitude
     console.log(details?.geometry?.viewport);
   }
@@ -52,11 +56,11 @@ const DiscoverScreen = () => {
   // When component didmount load data
   useEffect(() => {
     setIsLoading(true);
-    getPlacesData().then((data) => {
+    getPlacesData(bl_lat, bl_lng, tr_lat, tr_lng).then((data) => {
       setMainData(data);
       setInterval(setIsLoading(false), 2000);
     });
-  }, []);
+  }, [bl_lat, bl_lng, tr_lat, tr_lng]);
 
   return (
     <SafeAreaView className="bg-white flex-1 relative mt-12">
