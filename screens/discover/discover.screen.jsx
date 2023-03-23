@@ -56,11 +56,11 @@ const DiscoverScreen = () => {
   // When component didmount load data
   useEffect(() => {
     setIsLoading(true);
-    getPlacesData(bl_lat, bl_lng, tr_lat, tr_lng).then((data) => {
+    getPlacesData(bl_lat, bl_lng, tr_lat, tr_lng, type).then((data) => {
       setMainData(data);
       setInterval(setIsLoading(false), 2000);
     });
-  }, [bl_lat, bl_lng, tr_lat, tr_lng]);
+  }, [bl_lat, bl_lng, tr_lat, tr_lng, type]);
 
   return (
     <SafeAreaView className="bg-white flex-1 relative mt-12">
