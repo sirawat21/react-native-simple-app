@@ -1,15 +1,15 @@
-import React from "react";
 import { GooglePlacesAutocomplete } from "react-native-google-places-autocomplete";
 
-const GooglePlacesInput = ({apiKey}) => {
+const GooglePlacesInput = ({ apiKey, onPressHandler }) => {
+
   return (
     <GooglePlacesAutocomplete
-      GooglePlacesDetailsQuery={{fields: "geometry"}} // fetch data from geometry field
+      GooglePlacesDetailsQuery={{ fields: "geometry" }} // fetch data from geometry field
       placeholder="Search"
       fetchDetails={true}
       onPress={(data, details = null) => {
         // 'details' is provided when fetchDetails = true
-        console.log(details?.geometry?.viewport); // get latitude and longitude
+        onPressHandler(details);
       }}
       query={{
         key: apiKey,

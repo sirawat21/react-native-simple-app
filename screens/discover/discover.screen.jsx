@@ -24,6 +24,16 @@ import {
 import { getPlacesData } from "../../helpers";
 
 const DiscoverScreen = () => {
+  // State for last, long location
+  const [bl_lat, setBl_lat] = useState(null);
+  const [bl_lng, setBl_lng] = useState(null);
+  const [tr_lat, setTl_lat] = useState(null);
+  const [tr_lng, setTl_lng] = useState(null); 
+  // On press handler of Google Places
+  const onPressGooglePlacesInputHandler = (details) => {
+    // console.log(details?.geometry?.viewport); // get latitude and longitude
+    console.log(details?.geometry?.viewport);
+  }
   // Adjusting navigation when layout was loaded; remove nav header
   const navigation = useNavigation();
   useLayoutEffect(() => {
@@ -67,7 +77,7 @@ const DiscoverScreen = () => {
       {/* Second Section */}
       {/* Search box */}
       <View className="flex-row items-center bg-white mx-4 rounded-xl py-1 px-4 shadow-lg mt-4">
-        <GooglePlacesInput apiKey={API_GOOGLE_PLACE} />
+        <GooglePlacesInput apiKey={API_GOOGLE_PLACE} onPressHandler={onPressGooglePlacesInputHandler}/>
       </View>
       {/* Third Section */}
 
